@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>1-to-1 Audio Call</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        background: #0f172a;
+        color: #e5e7eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .card {
+        background: #020617;
+        padding: 2rem;
+        border-radius: 12px;
+        width: 340px;
+        text-align: center;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      }
+      button {
+        margin-top: 1rem;
+        padding: 0.6rem 1rem;
+        border-radius: 8px;
+        border: none;
+        background: #38bdf8;
+        color: #020617;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      audio {
+        margin-top: 1rem;
+        width: 100%;
+      }
+      .status {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+      .link {
+        margin-top: 0.8rem;
+        font-size: 0.75rem;
+        opacity: 0.6;
+        word-break: break-all;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>🎧 1-to-1 Audio Call</h2>
+      <button id="start">Start Call</button>
+      <audio id="remoteAudio" autoplay playsinline></audio>
+      <div class="status" id="status">Idle</div>
+      <div class="link">
+        Share this link:<br />
+        <span id="roomLink"></span>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("roomLink").textContent = window.location.href;
+    </script>
+    <script src="/client.js"></script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+################################
+# Python / Backend
+################################
+backend/__pycache__/
+backend/*.py[oc]
+backend/build/
+backend/dist/
+backend/wheels/
+backend/*.egg-info/
+backend/.venv/
+backend/venv/
+
+################################
+# Node / Frontend
+################################
+frontend/node_modules/
+frontend/.pnp
+frontend/.pnp.*
+frontend/.yarn/*
+!frontend/.yarn/patches
+!frontend/.yarn/plugins
+!frontend/.yarn/releases
+!frontend/.yarn/versions
+
+# Next.js
+frontend/.next/
+frontend/out/
+frontend/build/
+
+# Testing
+frontend/coverage/
+
+################################
+# Environment files
+################################
+.env
+.env.*
+backend/.env
+frontend/.env
+
+################################
+# Logs & Debug
+################################
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.log
+
+################################
+# OS & Misc
+################################
+.DS_Store
+*.pem
+
+################################
+# Vercel
+################################
+.vercel
+
+################################
+# TypeScript
+################################
+*.tsbuildinfo
+frontend/next-env.d.ts
