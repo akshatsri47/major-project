@@ -1,10 +1,8 @@
-from llm import get_model
-from langchain.tools import tool
-model = get_model()
-
-@tool
-def book_appointment(query:str)-> str:
-    """to book an appointment"""
-       
-    
-    
+def appointment_node(state) -> dict:
+    return {
+        "results": [{
+            "agent": "appointment",
+            "status": "ok",
+            "data": f"Dummy appointment agent handled: {state['query']}"
+        }]
+    }

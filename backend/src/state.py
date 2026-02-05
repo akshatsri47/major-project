@@ -1,22 +1,22 @@
-from typing import literal,Typedict,Optional
+from typing_extensions  import Literal,TypedDict,Optional,Annotated
 import operator
 
-class AgentInput(Typedict):
+class AgentInput(TypedDict):
     query:str
     user_id:Optional[str]
 
-class AgentOutput(Typedict):
-    source:str,
+class AgentOutput(TypedDict):
+    source:str
     result:str
 
-class Classification(Typedict):
-    source:literal["billing","appointment","report"],
+class Classification(TypedDict):
+    source:Literal["billing","appointment","report"]
     query:str
 
-class RouterState(Typedict):
-    query:str,
+class RouterState(TypedDict):
+    query:str
     user_id:Optional[str]
     classifications:list[Classification]
-    results:Annoated[list[AgentOutput],operator.add]
+    results:Annotated[list[AgentOutput],operator.add]
     final_answer:str
 
