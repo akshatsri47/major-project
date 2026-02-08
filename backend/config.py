@@ -9,3 +9,4 @@ collection_name="doctors"
 collection_name2="appointments"
 MONGODB_DB_NAME="medical_office"
 Model_name = "gpt-4o-mini"
+BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")

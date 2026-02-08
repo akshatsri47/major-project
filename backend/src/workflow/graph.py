@@ -17,7 +17,6 @@ Workflow = (
     .compile()
 
 )
-
 result = Workflow.invoke({
     "query": "book a doctor",
     "user_id": None,

@@ -124,7 +124,7 @@ async def book_appointment(payload: Appointmentmodel):
 @app.get("/appointment/{appointment_id}")
 async def get_appointment(appointment_id: str):
 
-    appt = await appointments_collection.find_one(
+    appt = await appointment_collection.find_one(
         {"appointment_id": appointment_id}
     )
 
