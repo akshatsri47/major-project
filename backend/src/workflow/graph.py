@@ -18,7 +18,7 @@ Workflow = (
 
 )
 result = Workflow.invoke({
-    "query": "book a doctor",
+    "query": "is there any cardiologist avaliable",
     "user_id": None,
     "classifications": [],
     "results": [],
