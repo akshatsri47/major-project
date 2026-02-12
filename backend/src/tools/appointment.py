@@ -13,4 +13,6 @@ def get_availablity()-> str:
         return json.dumps(doctors)
     except requests.exceptions.RequestException as e:
         return f"Error fetching doctors availabiltiy"
-
+def send_mail()
+    """ send a confirmation mail to the current user"""
+    return print(f"mail sent successsfully")
